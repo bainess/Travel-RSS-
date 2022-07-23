@@ -88,16 +88,22 @@
     --main-red: rgba(242, 120, 92);
     --main-blue: rgba(13,96,111);
 }
-
+body{
+    max-width: 1440px;
+}
+@media all and (min-width:390px) and (max-width:800px) {
+    body{
+        max-width: 390px;
+    }
+}
 .wrapper{
-    width: 1440px;
-    background: no-repeat url(../assets/images/garrett-parker-DlkF4-dbCOU-unsplash.jpg), no-repeat url(../assets/images/Rectangle\ 33.jpg);
-    background-position: top, bottom;
-    overflow:hidden;
+    background:  no-repeat url(../assets/images/garrett-parker-DlkF4-dbCOU-unsplash.jpg);
+    background-position: top;
+    height:765px;
 }
 header{
     width: 100%;
-    height:6.3vw;
+    height: 90px;
     background-color: var(--red-trsp-color);
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
     display: flex;
@@ -140,9 +146,6 @@ ul{
     box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16) ;
     margin-right: 2.2em;
 }
-.preview{
-    
-}
 .preview>div{
     margin: 2.5em 0 18.5em 8.5em;
 }
@@ -161,13 +164,13 @@ h5{
     font-size: 1.3em;
 }
 .preview div div{
-    background-color: var(--main-white);
+    background-color: var(--main-white); 
     border: 1px solid var(--main-white);
     border-radius: 1em;
     margin-top: 3.5em;
-    margin-left: -0.2em;
     padding: 1.1em 1.2em 1.1em 3em;
-    width: 64em;
+    width: 67.5%;
+    height: 6.7em;
     color: var(--main-red);
     display: flex;
     flex-direction: row;
@@ -177,15 +180,17 @@ input{
     font-family: var(--aleoI);
     font-size: 1.6em;
     width: 40vw;
+    background: rgb(255,255,255, 0)   ;
 }
 input::placeholder{
     color: var(--main-red);
     letter-spacing: 0.04em; 
-    
 }
 .planning{
+    width: 18.2rem;
     font-family: var(--redhatR);
-    font-size: 1.8em;
+    font-size: 1.75em;
+    letter-spacing: 0.008em;
     font-weight: 600;
     background-color: var(--main-blue);
     border: 1px solid var(--main-blue);
@@ -193,7 +198,118 @@ input::placeholder{
     padding: 0.5em 1.2em 0.5em 1.5em;
     color: var(--main-white);
 }
- .steps{
+/* .search__block{
+    background: rgb(255,255,255, 0.7);
+} */
+/* .
+}
+@media all and (min-width:390px) and (max-width:800px) {
+    .wrapper{
+        width: 390px;
+        background: no-repeat url(../assets/images/garrett-parker-DlkF4-dbCOU-unsplash_2.jpg);
+        object-fit: contain;
+        border-radius: 2em;
+    }
+}
+@media all and (min-width:390px) and (max-width:800px) {
+    header{
+        
+        background:linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) );
+        box-shadow: none;
+    }
+}
+
+@media all and (min-width:390px) and (max-width:800px) {
+    .logo{
+        position:relative;
+        top: 38px;
+        left: -178px;
+    }
+}
+
+
+@media all and (min-width:390px) and (max-width:800px) {
+    h1{
+        display: none;
+    }
+    nav{
+        display:none;
+    }
+    .login{
+        display: none;
+    }
+}
+
+.burger__menu{
+    display: none;
+}
+@media all and (min-width:390px) and (max-width:800px) {
+    .burger__menu{
+        display:flex;
+        flex-direction: column;
+        row-gap: 4px;
+        position: absolute;
+        top: 50px;
+        left: 340px;
+        width: 25px;
+        height: 30px;
+        
+
+    }
+    .burger__menu > div{
+        height: 3px;
+        width: 25px;
+        background-color: var(--main-white);
+    }
+    
+
+
+
+@media all and (min-width:390px) and (max-width:800px) {
+    h2{
+        display: none;
+    }
+}
+
+@media all and (min-width:390px) and (max-width:800px) {
+    .preview  h5{
+        display:none;
+    }
+}
+
+@media all and (min-width:390px) and (max-width:800px) {
+    .preview div div {
+        width: 360px;
+        height: 48px;
+        margin: 7.6em 0 0 -7.4em;
+        border-radius: 1.2em;
+    } 
+}
+
+/* @media all and (min-width:390px) and (max-width:800px) {
+    .search__block{
+        width: 
+    }
+} 
+
+@media all and (min-width:390px) and (max-width:800px) {
+    input{
+        font-size: 01em;
+    }
+}
+
+
+@media all and (min-width:390px) and (max-width:800px) {
+    .planning{
+        font-size: 0.8em;
+        width: 20em;
+        height: 2.8em;
+        border-radius: 1.2em;
+        margin: -0.7em 0em 0 3.8em ;
+    }
+}
+.steps{
+    margin-left: auto; 
     width: 1177px;
     height: 10%;
     margin: 24.5em 0 0 9.5em;
@@ -351,7 +467,7 @@ h4{
 }
 .last-storie-pic{
     min-width: 400px;
-    /* height: 250px; */ 
+    /* height: 250px; 
 }
 .see-more-button{
     background-color: var(--main-red);
@@ -382,4 +498,4 @@ footer > div{
     flex-direction: row;
     justify-content:flex-end;
     column-gap: 1.4em;
-}
+} */
